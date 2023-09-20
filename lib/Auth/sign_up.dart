@@ -1,7 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:rover_project/widget/kText.dart';
 
 import '../widget/kImage.dart';
+import '../widget/kTextFromField.dart';
 import 'sign_in.dart';
 
 class SignUp extends StatefulWidget {
@@ -26,6 +28,10 @@ class _SignUpState extends State<SignUp> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SImage(),
+                  SizedBox(height: 10,),
+                  KText(
+                    data: "Register for create an account",
+                  ),
     
                   SizedBox(height: 40,),
     
@@ -76,6 +82,7 @@ class _SignUpState extends State<SignUp> {
                     iconData: Icons.lock,
                     hintText: "Password ",
                    label: Text("Password"),
+                   isPass: true,
                   ),
                   SizedBox(height: 10,),
     
@@ -83,6 +90,7 @@ class _SignUpState extends State<SignUp> {
                     iconData: Icons.lock,
                     hintText: "Confirm Password ",
                    label: Text("Confirm Password"),
+                   isPass: true,
                   ),
                   SizedBox(height: 10,),
     
@@ -91,6 +99,7 @@ class _SignUpState extends State<SignUp> {
                     height: 40,
                     width: 150,
                     child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
                       onPressed: () {
                         print("Sign up");
                       

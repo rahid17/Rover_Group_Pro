@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import '../sign in an up/sign_in.dart';
+import '../Auth/sign_in.dart';
 import '../widget/kImage.dart';
 
 
@@ -14,11 +14,20 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
 
-  openPage(context){
-    Timer(Duration(seconds: 2), () {
+  // openPage(context){
+  //   Timer(Duration(seconds: 2), () {
+  //     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignIn(),));
+  //    });
+  // }
+
+  openPage(Context){
+    Future.delayed(Duration(seconds: 2), () {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignIn(),));
-     });
+    }
+    
+    );
   }
+
   @override
   void initState() {
     openPage(context);
