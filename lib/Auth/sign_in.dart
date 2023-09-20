@@ -19,6 +19,7 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
   final _formKey =GlobalKey();
+  bool obSecure = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,6 +72,14 @@ class _SignInState extends State<SignIn> {
                     hintText: "Password ",
                    label: Text("Password"),
                    isPass: true,
+                   obsecureText: obSecure,
+                   suffixicon: GestureDetector(onTap: () {
+                    obSecure=!obSecure;
+                    setState(() {
+                      
+                    });
+                     
+                   },child: obSecure== false? Icon(Icons.visibility):Icon(Icons.visibility_off),),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
