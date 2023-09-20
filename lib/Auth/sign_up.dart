@@ -14,6 +14,7 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  bool obSecure = true;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -78,19 +79,35 @@ class _SignUpState extends State<SignUp> {
                   ),
                   SizedBox(height: 10,),
     
-                  KTextFromField(
+                 KTextFromField(
                     iconData: Icons.lock,
                     hintText: "Password ",
                    label: Text("Password"),
                    isPass: true,
+                   obsecureText: obSecure,
+                   suffixicon: GestureDetector(onTap: () {
+                    obSecure=!obSecure;
+                    setState(() {
+                      
+                    });
+                     
+                   },child: obSecure== false? Icon(Icons.visibility):Icon(Icons.visibility_off),),
                   ),
                   SizedBox(height: 10,),
     
-                  KTextFromField(
+                   KTextFromField(
                     iconData: Icons.lock,
-                    hintText: "Confirm Password ",
-                   label: Text("Confirm Password"),
+                    hintText: "Password ",
+                   label: Text("Password"),
                    isPass: true,
+                   obsecureText: obSecure,
+                   suffixicon: GestureDetector(onTap: () {
+                    obSecure=!obSecure;
+                    setState(() {
+                      
+                    });
+                     
+                   },child: obSecure== false? Icon(Icons.visibility):Icon(Icons.visibility_off),),
                   ),
                   SizedBox(height: 10,),
     
