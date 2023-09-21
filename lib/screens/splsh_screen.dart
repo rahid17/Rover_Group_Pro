@@ -36,6 +36,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double width =MediaQuery.of(context).size.width;
+    double height =MediaQuery.of(context).size.height;
 
     return SafeArea(
       child: Scaffold(
@@ -46,7 +48,13 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 SImage(),
                   SizedBox(height: 20,),
-                Text("Bangladesh Scouts",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),)
+                Text("Bangladesh Scouts",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+                SizedBox(height: 30,),
+                SizedBox(
+                  child: CircularProgressIndicator(
+                    color: Colors.red,
+                  ),
+                )
               ],
             ),
           ),

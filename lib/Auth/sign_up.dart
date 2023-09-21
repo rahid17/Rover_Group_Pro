@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:rover_project/widget/kText.dart';
 
+import '../screens/home.dart';
 import '../widget/kImage.dart';
 import '../widget/kTextFromField.dart';
 import 'sign_in.dart';

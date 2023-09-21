@@ -10,6 +10,7 @@ class KTextFromField extends StatelessWidget {
     this.validator, 
     this.obsecureText=false,
     this.suffixicon,
+    this.controller
   });
 final bool isPass;
 final IconData? iconData;
@@ -18,6 +19,7 @@ final hintText;
 final dynamic validator;
 final  obsecureText;
 final  suffixicon;
+final TextEditingController? controller;
 
 
 
@@ -28,9 +30,8 @@ final  suffixicon;
       onTap: () {
         
       },
-      validator: (value){
-        
-      }  ,
+      validator: validator  ,
+      controller: controller,
       obscureText: obsecureText,
       decoration: InputDecoration(
         
@@ -56,7 +57,7 @@ final  suffixicon;
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
-          borderSide: BorderSide(color: Color.fromARGB(255, 71, 87, 236),width: 2)
+          borderSide: BorderSide(color: Color.fromARGB(255, 219, 25, 25),width: 2)
         )
 
         ),
