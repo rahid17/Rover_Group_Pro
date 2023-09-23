@@ -10,7 +10,10 @@ class KTextFromField extends StatelessWidget {
     this.validator, 
     this.obsecureText=false,
     this.suffixicon,
-    this.controller
+    this.prefixIcon,
+    this.controller,
+    this.readonly=false,
+    
   });
 final bool isPass;
 final IconData? iconData;
@@ -19,7 +22,9 @@ final hintText;
 final dynamic validator;
 final  obsecureText;
 final  suffixicon;
+final prefixIcon;
 final TextEditingController? controller;
+final bool readonly;
 
 
 
@@ -33,14 +38,16 @@ final TextEditingController? controller;
       validator: validator  ,
       controller: controller,
       obscureText: obsecureText,
+      readOnly: readonly,
       decoration: InputDecoration(
         
         label: label,
         hintText: hintText,
         
 
-        prefixIcon: iconData==null? 
-        const Icon(Icons.person) :Icon(iconData),
+        // prefixIcon: iconData==null? 
+        // const Icon(Icons.person) :Icon(iconData),
+        prefixIcon: prefixIcon,
 
         suffixIcon: suffixicon,
         border: OutlineInputBorder(

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:rover_project/Auth/keyData.dart';
 // import 'package:rover_project/screens/splsh_screen.dart';
 import 'package:rover_project/Auth/sign_up.dart';
+import 'package:rover_project/screens/navBar.dart';
 
 import '../widget/kImage.dart';
 import '../widget/kText.dart';
@@ -69,6 +70,7 @@ class _SignInState extends State<SignIn> {
                     SizedBox(height: 40,),
               
                     KTextFromField(
+                    prefixIcon: Icon(Icons.person),
                      hintText: "Username or Email ",
                      label: Text("Username or Email"),
                      controller: AuthData.email,
@@ -90,7 +92,18 @@ class _SignInState extends State<SignIn> {
               
                     KTextFromField(
                       controller: AuthData.pass,
-                      iconData: Icons.lock,
+                       validator: (value){
+                      print(value);
+                      
+                      if ( value==null|| value.isEmpty){
+                        return "Enter password";
+                      }else {
+                        return null;
+                      }
+                      
+                        
+                     },
+                      prefixIcon: Icon(Icons.lock),
                       hintText: "Password ",
                       label: Text("Password"),
                       isPass: true,
@@ -100,6 +113,8 @@ class _SignInState extends State<SignIn> {
                       setState(() {
                         
                       });
+                      
+                      
                        
                      },child: obSecure== false? Icon(Icons.visibility):Icon(Icons.visibility_off),),
                     ),
@@ -135,7 +150,8 @@ class _SignInState extends State<SignIn> {
                       TextSpan(text: "Sign Up",style: TextStyle(fontSize: 17, color: Colors.blueAccent[700]),
                       recognizer: TapGestureRecognizer()..onTap= () {
                         print("tapped");
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignUp(),));
+                        // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignUp(),));
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => NavBar(),));
                       } )
                     ]
                     ))
