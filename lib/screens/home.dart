@@ -65,6 +65,7 @@
 //new Home Page 
 
 import 'package:flutter/material.dart';
+import 'package:rover_project/widget/kImage.dart';
 import 'package:rover_project/widget/kTextFromField.dart';
 
 class HomePage extends StatefulWidget {
@@ -75,6 +76,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<Image> images = [
+        // Text("Rahid"),
+        // Text("Rahid"),
+        // Text("Rahid"),
+        // Text("Rahid"),
+        
+
+      ];
+    // imageController controller = imageController();  
+    PageController controller =PageController();
+    int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: 
@@ -124,9 +136,24 @@ class _HomePageState extends State<HomePage> {
               ),
               SizedBox(height: 20,),
               Container(
-                color: Colors.blue,
-                child: Text("hello"),
-              )
+                height: 80,
+                color: Colors.amber,
+                child: PageView.builder(
+                  itemCount: 4,
+                  controller: controller,
+                  onPageChanged: (images) {
+                    setState(() {
+                     currentIndex = images;
+                    });
+                  },
+                  itemBuilder: (context, position) {
+                    return 
+                    
+                    ;
+                  }),
+              ),
+
+             
 
               
             ],

@@ -22,27 +22,31 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: itemWidgetList[index],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: index,
-        onTap: (value) {
-          setState(() {
-            index = value;
-          });
-        },
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey,
-        type: BottomNavigationBarType.fixed,
-        
-        items: 
-        [
-          BottomNavigationBarItem(icon: Icon(Icons.home),label:"home "),
-          BottomNavigationBarItem(icon: Icon(Icons.home),label:"home "),
-          BottomNavigationBarItem(icon: Icon(Icons.home),label:"home "),
-          BottomNavigationBarItem(icon: Icon(Icons.home),label:"home "),
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+        child: BottomNavigationBar(
+          backgroundColor: Colors.greenAccent,
+          currentIndex: index,
+          onTap: (value) {
+            setState(() {
+              index = value;
+            });
+          },
+          selectedItemColor: Colors.blue,
+          unselectedItemColor: Colors.grey,
+          type: BottomNavigationBarType.fixed,
           
-
-        ]
-        ),
+          items: 
+          [
+            BottomNavigationBarItem(icon: Icon(Icons.home),label:"home "),
+            BottomNavigationBarItem(icon: Icon(Icons.home),label:"home "),
+            BottomNavigationBarItem(icon: Icon(Icons.home),label:"home "),
+            BottomNavigationBarItem(icon: Icon(Icons.home),label:"home "),
+            
+      
+          ]
+          ),
+      ),
     );
   }
 }
