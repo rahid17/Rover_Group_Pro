@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:rover_project/widget/main_sImages.dart';
 import '../Auth/sign_in.dart';
 import '../widget/kImage.dart';
 
@@ -47,6 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SImage(),
+                
                   SizedBox(height: 20,),
                 Text("Bangladesh Scouts",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
                 SizedBox(height: 30,),
@@ -63,16 +65,3 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 }
 
-// class SImage extends StatelessWidget {
-//   const SImage({
-//     super.key,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return SizedBox(
-//       height: 150,
-//       width: 150,
-//       child: Image.asset("assets/bn_scout_logo.png"));
-//   }
-// }

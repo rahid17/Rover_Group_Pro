@@ -5,6 +5,7 @@ import 'package:rover_project/Auth/keyData.dart';
 // import 'package:rover_project/screens/splsh_screen.dart';
 import 'package:rover_project/Auth/sign_up.dart';
 import 'package:rover_project/screens/navBar.dart';
+import 'package:rover_project/widget/main_sImages.dart';
 
 import '../widget/kImage.dart';
 import '../widget/kText.dart';

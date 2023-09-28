@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:rover_project/widget/kText.dart';
+import 'package:rover_project/widget/main_sImages.dart';
 
 import '../screens/home.dart';
 import '../widget/kImage.dart';
@@ -30,6 +31,7 @@ class _SignUpState extends State<SignUp> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SImage(),
+                  
                   SizedBox(height: 10,),
                   KText(
                     data: "Register for create an account",
